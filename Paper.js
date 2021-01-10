@@ -11,7 +11,7 @@ class Paper
         this.radius=70;
         this.x=x;
         this.y=y;
-        this.body=Bodies.circle(this.x,this.y,70,options);
+        this.body=Bodies.circle(this.x,this.y,30,options);
         this.image=loadImage("paper.png");
         World.add(world,this.body);
 
