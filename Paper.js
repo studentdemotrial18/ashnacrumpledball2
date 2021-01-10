@@ -8,7 +8,7 @@ class Paper
             friction:2.5,
             density:1.2
         }
-        this.radius=70;
+        this.radius=30;
         this.x=x;
         this.y=y;
         this.body=Bodies.circle(this.x,this.y,30,options);
