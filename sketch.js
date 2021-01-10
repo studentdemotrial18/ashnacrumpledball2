@@ -24,7 +24,7 @@ function setup() {
 	//bin.addImage(binImg);
 	//bin.scale=0.5;
 	
-	paper=new Paper(465,450);
+	paper=new Paper(465,450,30);
 
 
 	side1= new Box(1100,470,120,160);
