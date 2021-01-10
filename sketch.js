@@ -17,17 +17,17 @@ function setup() {
 	world = engine.world;
 	
     fill("yellow");
-	ground= Bodies.rectangle(700,560,1400,20, {isStatic:true});
+	ground= Bodies.rectangle(700,470,1400,20, {isStatic:true});
 	World.add(world,ground);
 
-	bin = createSprite(1100,470,20,20);
-	bin.addImage(binImg);
-	bin.scale=0.5;
+	//bin = createSprite(1100,470,20,20);
+	//bin.addImage(binImg);
+	//bin.scale=0.5;
 	
-	paper=new Paper();
-	
+	paper=new Paper(465,450);
 
-	side1= new Box(1100,540,120,20);
+
+	side1= new Box(1100,470,120,160);
 	side2= new Box(1050,470,20,160);
 	side3= new Box(1150,470,20,160);
 
@@ -43,24 +43,28 @@ function draw() {
   Engine.update(engine);
   rectMode(CENTER);
   rect(ground.position.x,ground.position.y,1400,20);
- 
-
-  paper.display();
-
+   
   side1.display();
-  side2.display();
-  side3.display();
+  paper.display();
+  //side2.display();
+ // side3.display();
   
   drawSprites();
- 
+  text("X"+mouseX+","+"Y"+mouseY,mouseX,mouseY);
 }
 function keyPressed(){
 	
 	if(keyCode === UP_ARROW){
 
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-80})
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:140,y:-145})
 	}
 }
+
+
+
+
+
+
 
 
 
